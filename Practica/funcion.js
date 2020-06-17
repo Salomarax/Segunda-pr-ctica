@@ -2241,11 +2241,17 @@ function validar(){
 	return false;
     }
 
+
+
 	var nombre = document.getElementById("nombre").value;
 	var apellidopaterno = document.getElementById("apellidopaterno").value;
 	var apellidomaterno = document.getElementById("apellidomaterno").value;
 	var direccion = document.getElementById("direccion").value;
 	var comuna = document.getElementById("Comuna").options[document.getElementById("Comuna").selectedIndex].text;
+
+    if(document.querySelector("#addRow").getAttribute("name") != "")
+    {document.querySelector('input[name="radiobox"]:checked').closest('tr').remove()}
+    console.log(document.querySelector("#addRow").getAttribute("name"))
 
 	var table = document.getElementById("Tdatos") [0];
     arrayId.push((arrayId.length)+1);
@@ -2265,7 +2271,7 @@ function validar(){
 	cel5.innerHTML = `<p id="comuna${arrayId.length}">${comuna}</p>`;
     cel6.innerHTML = `<input type='radio' onclick='pasar_datos(${arrayId.length})' name='radiobox' id='${arrayId.length}'>`;
 
-
+    document.querySelector("#addRow").setAttribute("name","")
 
  	 document.getElementById("nombre").value = ""
  	 document.getElementById("apellidopaterno").value  = ""
@@ -2275,6 +2281,8 @@ function validar(){
 	 document.getElementById("Provincia").value = 0
 	 document.getElementById("Comuna").value = 0
 } 
+
+
 
 document.getElementById("addRow").addEventListener("click", function(){ 
 	validar()
@@ -2286,9 +2294,14 @@ pasar_datos=function(arrayId){
      document.getElementById("apellidomaterno").value = document.getElementById(`apellidomaterno${arrayId}`).innerHTML
      document.getElementById("direccion").value = document.getElementById(`direccion${arrayId}`).innerHTML
      document.getElementById("Region").value = 0;
-     document.getElementById("Provincia").value = 0
-     document.getElementById("Comuna").value = 0
+     document.getElementById("Provincia").value = 0;
+     document.getElementById("Comuna").value = 0;
+
+     document.querySelector("#addRow").setAttribute("name",arrayId)
+
+
 }
+
 
 
     document.getElementById("Eliminar").addEventListener("click", function(event){ 
@@ -2304,7 +2317,8 @@ pasar_datos=function(arrayId){
              document.getElementById("Provincia").value = 0
              document.getElementById("Comuna").value = 0    
         
-
+            document.getElementById("nombre").focus();
+            document.getElementById("nombre").select();
     })
 
 
