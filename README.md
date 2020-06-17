@@ -1,2 +1,2 @@
-# Segunda-pr-ctica
+# Segunda-practica
 Actualización de la práctica
