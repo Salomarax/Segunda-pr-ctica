@@ -1,0 +1,81 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script type="text/javascript" src="./funcion.js"></script>
+		<meta charset="utf-8">
+		<title>Practica laboral</title>
+	</head>
+	<body>
+		<div id="Fila1">
+			 <div id=Formulario> 
+			 	<table >
+			 		<tr>
+			 		<td> Nombre </td>
+			 		<td><input type="text" id="nombre" name="Nombre" maxlength="20"> </td>
+
+			 		</tr>
+			 		<tr>
+			 			<td> Apellido Paterno</td>
+			 			<td><input type="text" id="apellidopaterno" name="ApellidoPaterno" maxlength="15"> </td>
+			 		</tr>
+			 		<tr>
+			 			<td> Apellido Materno</td>
+			 			<td><input type="text" id="apellidomaterno" name="ApellidoMaterno" maxlength="15"> </td>
+			 		</tr>
+			 		<tr>
+			 			<td> Dirección</td>
+			 			<td><input type="text" id="direccion" name="Direccion" maxlength="50"> </td>
+			 		</tr>
+			 		<tr>
+			 			<td> Región</td>
+			 			<td><select id="Region"></select></td>
+			 		</tr>
+			 		<tr>
+			 			<td> Provincia</td>
+			 			<td><select id="Provincia"></select></td>
+			 		</tr>
+			 		<tr>
+			 			<td> Comuna</td>
+			 			<td><select id="Comuna"></select></td>
+			 		</tr>
+
+			 		<tr>
+			 			<td>
+			 			<button id="addRow"> Agregar </button>
+			 			</td>
+			 		</tr>
+
+
+			 	</table>
+
+
+
+			 </div>
+			 <div id="Datos">
+
+			 	<table id="Tdatos">
+			 		<thead>
+			 			<th> </th>
+			 			<th>Nombre</th>
+			 			<th> Apellido Paterno</th>
+			 			<th> Apellido Materno</th>
+			 			<th> Dirección</th>
+			 			<th> Comuna</th>
+
+			 			<td>
+			 				<button id="Eliminar" value="Delete" colspan= "5" style="text-align: right" > Eliminar </button>
+			 			</td>
+
+			 		</thead>
+			 		<tbody id="ContenidoTabla">
+			 		
+			 		</tbody>
+			 	</table>
+			 </div>
+
+		</div>
+	
+	</body>
+	</html>

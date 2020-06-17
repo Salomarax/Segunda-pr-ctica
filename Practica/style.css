@@ -1,0 +1,44 @@
+
+body{
+	padding: 30px;
+
+
+}
+#Formulario {
+	background-color: #B7ABBD;
+	float: left;
+	padding: 20px;
+	width: 35%;
+}
+
+#Datos {
+	background-color: #C4C2C5;
+	float: left;
+	padding: 20px;
+	width: 55%;
+	text-align: center;
+
+}
+
+#Tdatos {
+	margin: auto;
+}
+
+#Boton{
+	padding-top: 20px;
+	text-align: right;
+}
+
+th{
+	padding: 10px;
+	background-color: #B3A5BA   ;
+}
+
+button{
+	padding: 15px;
+	color: white;
+	border-radius: 20%;
+	border: 0px;
+	background: #998D9F ;
+}
+
